@@ -1,10 +1,3 @@
-<?php
- $code = $this->input->get('code');
- $state = $this->input->get('state');
- $code = $code ?? "undefined";
- $state = $state ?? "undefined";
- $url = "instlost://authInstagram?code".$code."&state=".$state;
-?>
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Redirecting to instlost</title>
