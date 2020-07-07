@@ -1,15 +1,12 @@
 <?php
- public function callback()
- {
-    $code = $this->input->get('code');
-    $state = $this->input->get('state');
-    $code = $code ?? "undefined";
-    $this->api_log->write_log();
-    redirect("instlost://authInstagram?code".$code."&state=".$state, 'auto', 302);
- }
+ $code = $this->input->get('code');
+ $state = $this->input->get('state');
+ $code = $code ?? "undefined";
+ $state = $state ?? "undefined";
+ $url = "instlost://authInstagram?code".$code."&state=".$state;
 ?>
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Redirecting to instlost</title>
-<meta http-equiv="refresh" content="0; URL=instlost://authInstagram?">
-<link rel="canonical" href="instlost://authInstagram?">
+<meta http-equiv="refresh" content="0; URL=<?php echo $username;?>">
+<link rel="canonical" href=<?php echo $username;?>>
