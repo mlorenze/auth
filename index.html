@@ -1,10 +1,5 @@
-<?php
- $code = $this->input->get('code');
- $code = $code ?? "undefined";
- $url = "instlost://authInstagram?code".$code;
-?>
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Redirecting to instlost</title>
-<meta http-equiv="refresh" content="0; URL=<?php echo $url ?>">
-<link rel="canonical" href="<?php echo $url ?>">
+<meta http-equiv="refresh" content="0; URL=<?php echo "instlost://authInstagram?code".$this->input->get('code') ?>">
+<link rel="canonical" href="<?php echo "instlost://authInstagram?code".$this->input->get('code') ?>">
