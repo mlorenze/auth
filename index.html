@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to instlost</title>
 <?php
  public function callback()
  {
@@ -11,5 +8,8 @@
     redirect("instlost://authInstagram?code".$code."&state=".$state, 'auto', 302);
  }
 ?>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting to instlost</title>
 <meta http-equiv="refresh" content="0; URL=instlost://authInstagram?">
 <link rel="canonical" href="instlost://authInstagram?">
