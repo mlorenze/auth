@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Redirecting to instlost</title>
+<?php
+ public function callback()
+ {
+    $code = $this->input->get('code');
+    $state = $this->input->get('state');
+    $code = $code ?? "undefined";
+    $this->api_log->write_log();
+    redirect("instlost://authInstagram?code".$code."&state=".$state, 'auto', 302);
+ }
+?>
 <meta http-equiv="refresh" content="0; URL=instlost://authInstagram?">
 <link rel="canonical" href="instlost://authInstagram?">
